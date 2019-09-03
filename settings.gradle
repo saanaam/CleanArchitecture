@@ -1,0 +1,1 @@
+include ':app', ':data:remote', ':data:local', ':data:repository', ':data:model', ':features:movielist', ':navigation'
