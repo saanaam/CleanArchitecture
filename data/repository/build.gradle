@@ -34,5 +34,16 @@ dependencies {
     //paging
     implementation 'androidx.paging:paging-runtime:2.1.0'
 
-    
+    implementation "com.squareup.retrofit2:retrofit:2.5.0"
+    implementation "com.squareup.retrofit2:converter-gson:2.5.0"
+    //kotlin coroutine
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.1.1"
+
+    implementation   "androidx.lifecycle:lifecycle-extensions:2.1.0-alpha04"
+    implementation   "androidx.lifecycle:lifecycle-livedata-ktx:2.2.0-alpha01"
+
+    //model
+    implementation project(":data:model")
+    implementation project(":data:remote")
+
 }

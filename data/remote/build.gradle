@@ -39,8 +39,8 @@ dependencies {
     implementation "com.squareup.okhttp3:logging-interceptor:3.12.1"
 
     //koin
-    implementation "org.koin:koin-test:1.0.2"
-    implementation "org.koin:koin-android-viewmodel:2.0.1"
+    implementation "org.koin:koin-android:1.0.2"
+    implementation "org.koin:koin-android-viewmodel:1.0.2"
 
     //model
     implementation project(":data:model")

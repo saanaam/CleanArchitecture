@@ -34,7 +34,7 @@ dependencies {
     //navigation
     implementation "androidx.navigation:navigation-ui-ktx:2.0.0"
     //koin
-    implementation "org.koin:koin-test:1.0.2"
+    implementation "org.koin:koin-android:1.0.2"
     implementation "org.koin:koin-android-viewmodel:1.0.2"
 
     //module
