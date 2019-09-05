@@ -3,8 +3,8 @@ package ir.sanam.cleanarchitecture
 import android.app.Application
 import androidx.appcompat.app.AppCompatDelegate
 import ir.sanam.cleanarchitecture.di.appComponent
-import org.koin.android.ext.koin.androidContext
-import org.koin.core.context.startKoin
+import org.koin.android.ext.android.startKoin
+
 
 
 open class App: Application() {
@@ -23,7 +23,7 @@ open class App: Application() {
 
     // CONFIGURATION ---
     open fun configureDi() =
-        startKoin { androidContext(this@App) ; provideComponent()}
+        startKoin( this ,  provideComponent())
 
     // PUBLIC API ---
     open fun provideComponent() = appComponent
