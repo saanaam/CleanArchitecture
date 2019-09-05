@@ -45,6 +45,7 @@ dependencies {
 
     //module
     implementation project(":data:model")
+    implementation project(":navigation")
 
 
 }

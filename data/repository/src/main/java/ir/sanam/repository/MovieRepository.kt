@@ -8,17 +8,16 @@ import ir.sanam.utils.Resource
 import kotlinx.coroutines.Deferred
 
 interface MovieRepo{
-fun GetMovieList() : LiveData<Resource<MovieResponse>>
+suspend fun GetMovieList() : LiveData<Resource<MovieResponse>>
 }
 
 class MovieRepository(private val movieDataSource: MovieDataSource) : MovieRepo{
-    override fun GetMovieList(): LiveData<Resource<MovieResponse>> {
+    override suspend fun GetMovieList(): LiveData<Resource<MovieResponse>> {
 
         return  object : RemoteBoundResourceLiveData<MovieResponse, MovieResponse>() {
 
 
-            override fun processResponse(response: MovieResponse): MovieResponse =
-                MovieResponse(response.movieItems  , response.totalResults , response.response)
+            override fun processResponse(response: MovieResponse): MovieResponse = response
 
 
             override suspend fun saveInDatabase(data: MovieResponse) {}
