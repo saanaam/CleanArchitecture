@@ -13,10 +13,16 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
     }
 
     dataBinding {
         enabled true
+    }
+
+    compileOptions {
+        sourceCompatibility 1.8
+        targetCompatibility 1.8
     }
 
 
@@ -31,6 +37,10 @@ android {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+
+
+
     implementation 'androidx.appcompat:appcompat:1.0.2'
     implementation 'androidx.core:core-ktx:1.0.2'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
@@ -40,6 +50,7 @@ dependencies {
     //navigation
     implementation "androidx.navigation:navigation-ui-ktx:2.0.0"
     //koin
+    implementation "org.koin:koin-core:1.0.2"
     implementation "org.koin:koin-android:1.0.2"
     implementation "org.koin:koin-android-viewmodel:1.0.2"
 
@@ -51,4 +62,5 @@ dependencies {
     implementation project(":common")
     implementation project(":navigation")
     implementation project(":features:movielist")
+    implementation 'com.android.support:multidex:1.0.3'
 }

@@ -29,7 +29,6 @@ abstract class BaseFragment : Fragment() {
         super.onActivityCreated(savedInstanceState)
         observeNavigation(getViewModel())
         observeViewModel()
-        getViewModel().writeModuleState()
         setupSnackbar(this, getViewModel().snackBarError, Snackbar.LENGTH_LONG)
     }
 
