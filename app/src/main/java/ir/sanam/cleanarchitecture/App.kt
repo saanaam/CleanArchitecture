@@ -1,8 +1,14 @@
 package ir.sanam.cleanarchitecture
 
-import android.app.Application
-import androidx.appcompat.app.AppCompatDelegate
+
+
 import ir.sanam.cleanarchitecture.di.appComponent
+
+
+import android.app.Application
+
+
+import androidx.appcompat.app.AppCompatDelegate
 import org.koin.android.ext.android.startKoin
 
 
